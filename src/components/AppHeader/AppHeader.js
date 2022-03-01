@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 import * as routes from "../../constants/routes";
 
@@ -11,16 +11,44 @@ function AppHeader({ ...props }) {
           <nav className="navbar navbar-expand navbar-dark">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <NavLink
+                <Link
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to={routes.HOME}
                 >
                   Home
-                </NavLink>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  activeclassname="active"
+                  to={routes.EPISODE}
+                >
+                  Episode
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  activeclassname="active"
+                  to={routes.CHARACTER}
+                >
+                  Character
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  activeclassname="active"
+                  to={routes.LOCATION}
+                >
+                  Location
+                </Link>
               </li>
             </ul>
           </nav>
+          <Outlet  />
         </div>
       </div>
     </header>

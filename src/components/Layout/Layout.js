@@ -6,6 +6,7 @@ import Footer from "../Footer";
 
 function Layout({ children }) {
   return (
+    
     <>
       <AppHeader />
       <Main>{children}</Main>
